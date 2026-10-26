@@ -6,3 +6,7 @@
 #   pdfplumber>=0.11      # text extraction from real PDF resumes
 #   pymupdf>=1.24         # rendered-vs-extracted visibility diff on PDFs
 # These are intentionally left commented out so M1/M2 stay dependency-free.
+#
+# Rendering the result figures (scripts/make_plots.py) is the only step that
+# needs a third-party package; install it separately when you want the plots:
+#   matplotlib>=3.8
