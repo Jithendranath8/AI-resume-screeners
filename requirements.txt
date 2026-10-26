@@ -1,0 +1,8 @@
+# M1 + M2 require NO third-party packages — Python 3 standard library only.
+# Verified on Python 3.13. Runs on any free Colab/Kaggle instance, CPU-only.
+#
+# The M3 extension (real-LLM screener) will add, e.g.:
+#   openai>=1.0           # or any hosted-LLM client, for gpt-4o-mini
+#   pdfplumber>=0.11      # text extraction from real PDF resumes
+#   pymupdf>=1.24         # rendered-vs-extracted visibility diff on PDFs
+# These are intentionally left commented out so M1/M2 stay dependency-free.
