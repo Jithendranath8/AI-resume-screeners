@@ -154,7 +154,6 @@ jupyter notebook M2_Reproduction.ipynb   # then run all cells, top to bottom
 
 ## Notes
 
-- **Author:** sai@coderabbit.ai
 - **Context:** semester research project (NLP, Sem 7).
 - **Data:** fully synthetic; contains no real personal data and is safe to share.
 - **Reproduced numbers** in the notebook are the live output of the code, not estimates.
