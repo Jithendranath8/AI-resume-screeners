@@ -1,12 +1,11 @@
-# M1 + M2 require NO third-party packages — Python 3 standard library only.
-# Verified on Python 3.13. Runs on any free Colab/Kaggle instance, CPU-only.
+# The reproduction's core logic (screener, detector, defenses, metrics) is pure
+# Python standard library. The only third-party packages are for the tables and
+# figures rendered inside M2_Reproduction.ipynb:
+pandas>=2.0
+matplotlib>=3.8
+
+# M1_Literature_Survey.ipynb is prose only and needs nothing.
 #
-# The M3 extension (real-LLM screener) will add, e.g.:
-#   openai>=1.0           # or any hosted-LLM client, for gpt-4o-mini
-#   pdfplumber>=0.11      # text extraction from real PDF resumes
-#   pymupdf>=1.24         # rendered-vs-extracted visibility diff on PDFs
-# These are intentionally left commented out so M1/M2 stay dependency-free.
-#
-# Rendering the result figures (scripts/make_plots.py) is the only step that
-# needs a third-party package; install it separately when you want the plots:
-#   matplotlib>=3.8
+# To open and run the notebooks:
+#   pip install -r requirements.txt jupyter
+#   jupyter notebook M2_Reproduction.ipynb   # run top to bottom

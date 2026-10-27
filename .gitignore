@@ -6,6 +6,9 @@ __pycache__/
 venv/
 env/
 
+# Notebooks
+.ipynb_checkpoints/
+
 # OS / editor
 .DS_Store
 .idea/
