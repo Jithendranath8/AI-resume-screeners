@@ -1,0 +1,19 @@
+{
+  "study": "Lightweight detection of visible instruction injections in synthetic resume text",
+  "anchor": "Jay Barach, ResumeShield, arXiv:2609.20188v1",
+  "gap": "The anchor's small synthetic evaluation does not establish whether a trained text detector generalizes to held-out directive families while avoiding benign instruction-like resume content. This is a bounded evaluation gap, not a claim that trained injection detection is new.",
+  "hypothesis": "On the frozen held-out synthetic test set, a normalized character TF-IDF logistic-regression detector will improve injection recall by at least 0.20 absolute over a fixed keyword baseline, with a clean-text false-positive rate no greater than 0.10.",
+  "prediction": {"recall_gain_min": 0.20, "experimental_fpr_max": 0.10},
+  "primary_comparison": ["keywords", "normalized_char_lr"],
+  "unit": "One independently authored sentence; encoding variants of a sentence stay in the same split and are not independent samples.",
+  "split": "Fixed train/validation/test family assignments in data/sentences.json. No resume names or payload labels are model inputs. All variants inherit source split.",
+  "features": "Character TF-IDF within word boundaries, ngram_range=(3,5), lowercase=True, min_df=1; fit on training text only.",
+  "classifier": "LogisticRegression(C=1, class_weight=balanced, solver=liblinear, random_state=42, max_iter=1000)",
+  "normalization": "Remove U+200B and translate the eight Latin/Cyrillic confusables from M2. Limited mapping, not a general Unicode security solution.",
+  "threshold": "Choose among 0.3, 0.5, 0.7 using validation only: highest F1 subject to FPR<=0.10; if none qualify, minimum FPR then maximum F1. Tie: highest threshold.",
+  "ablations": ["raw_char_lr (remove normalization)", "normalized_word_lr (replace character features with word 1-2 grams)", "normalized_keywords (normalization alone without learning)"],
+  "metrics": ["TP/FP/FN/TN", "precision", "recall", "F1", "FPR", "per-family recall", "original-text-only metrics"],
+  "analysis": "Report paired recall gain on identical test rows. Use family-level bootstrap (seed 42, 2000 draws) for recall-gain uncertainty; descriptive only with few authored families. Report all false positives and false negatives. Do not tune after test results.",
+  "scope": "Detection only; no LLM ASR claim. No actual PDF rendering, ranking, factual verification, hiring recommendation, GPU or external API.",
+  "record": "Written before fitting any M3-M6 model. The first run stores this file's hash and a UTC start time in results/run.json; this is a local prediction record, not an independent preregistration."
+}

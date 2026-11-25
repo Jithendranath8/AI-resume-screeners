@@ -9,3 +9,6 @@ matplotlib>=3.8
 # To open and run the notebooks:
 #   pip install -r requirements.txt jupyter
 #   jupyter notebook M2_Reproduction.ipynb   # run top to bottom
+#
+# For the completed M3-M6 training/reporting pipeline, use instead:
+#   pip install -r requirements-experiments.txt

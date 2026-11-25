@@ -1,0 +1,68 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}\usepackage{url}
+\title{Lightweight Detection of Resume Prompt Injections: A Controlled Synthetic Study}
+\author{\IEEEauthorblockN{NLP Course Project}\IEEEauthorblockA{Author and institution to be supplied before submission}}
+\begin{document}\maketitle\begin{abstract}We examine a small, reproducible extension to a resume prompt-injection simulation: whether a CPU-trained text detector recognizes held-out instruction families while avoiding benign text. We compare fixed keywords with normalized character TF-IDF and logistic regression on 80 authored sentences split by family, expanded to three encodings each. Our prediction required a recall improvement of at least 20 percentage points and a false-positive rate no greater than 10\%. The detector achieves 93.75\% recall, 83.33\% precision, and 88.24\% F1, but its false-positive rate is 18.75\%. The joint hypothesis is therefore not supported. Ablations and recorded failures expose a tradeoff between recognizing varied directives and misclassifying benign descriptions. Results concern text detection, not successful attacks on an LLM or real hiring decisions.\end{abstract}
+\begin{IEEEkeywords}prompt injection, resume screening, text classification, failure analysis\end{IEEEkeywords}
+\section{Introduction}
+Resume-processing systems may receive applicant-authored text that asks the evaluator to depart from its intended task. A detector must distinguish such instructions from legitimate descriptions, including security work that quotes attack phrases. Catching more suspicious text is not sufficient if genuine content is routinely flagged. This student project studies that tradeoff using a deliberately small experiment.
+
+The project retains ResumeShield [1] as its anchor. M1 surveyed related work; M2 implemented an independent deterministic reconstruction. For feasibility, the new work replaces the initially proposed PDF and hosted-LLM extension with sentence-level classification. The contribution is a controlled evaluation with an explicit prediction, family-disjoint splits, component ablations, exported predictions, and failure analysis. The classifier architecture itself is standard.
+\section{Related Work and Reproduction Boundary}
+ResumeShield [1] combines filtering and channel separation in a synthetic screening benchmark. Its reported naive and fenced attack-success rates are 1 and 0; the simulated backend assumes compliance with separation. Our M2 reconstructs the corpus dimensions and selected outcomes but does not execute the original artifact. Local markup-only and all-filter rates differ from the paper, and the local success metric is narrower. These are method differences, not evidence of real-model robustness.
+
+Greshake et al. [2] establish indirect prompt injection as an application threat. Liu et al. [3] provide a systematic attack-and-defense framework. PhantomLint [4] studies visibility-based detection in structured documents and has public code. Zhang et al. [5] examine resume injections in a production corpus. Our experiment addresses a smaller evaluation question: generalization of a trainable text detector to authored directive families while handling benign instruction-like content. We do not claim that this gap is the first investigation of learned injection detection.
+\section{Research Question and Prior Prediction}
+On the frozen held-out synthetic test set, a normalized character TF-IDF logistic-regression detector will improve injection recall by at least 0.20 absolute over a fixed keyword baseline, with a clean-text false-positive rate no greater than 0.10.
+
+The two requirements form one joint hypothesis. Both must hold. The prediction was written to M3\_Protocol.json before model fitting; the run stores its SHA-256 hash and a UTC start time. This local record documents execution order but is not an independently timestamped preregistration. No test-driven threshold adjustment was made after observing the outcome.
+\section{Experimental Design}
+Data comprise 80 authored English sentences: 32 training, 16 validation, and 32 test sources, balanced between benign and injection labels in each split. An injection label denotes an attempt to direct the evaluator, not an empirically successful attack. Training families include overrides, ranking commands, role claims and concealment requests. Validation uses bypass and output directives. Test attacks use paraphrase, authority, formatting and pressure; test benign groups include quotations, recommendations, project descriptions and service work. Labels and family assignments were set before training.
+
+Each source receives an original version, a version with zero-width separators, and a version using eight Latin/Cyrillic confusables. This produces 96 training, 48 validation and 96 test rows. All versions of a source stay together. The model sees sentence text only; IDs, labels and family names are not features. Assertions check family disjointness and absence of canonical-text overlap. Variants are correlated, not additional independent observations; the effective test collection contains 32 sentences.
+
+The fixed baseline searches seven literal phrases from the initial M2 lexical detector. The experimental pipeline removes U+200B, folds the limited confusable map, and fits character TF-IDF features with within-word n-grams of length 3 through 5. Logistic regression uses C=1, balanced class weights, liblinear, random\_state=42 and max\_iter=1000. Vocabulary and weights are fitted on training text only. No GPU, external API or pretrained language model is used.
+
+Threshold candidates are 0.3, 0.5 and 0.7. Selection maximizes validation F1 subject to FPR at most 0.10. If no candidate satisfies that constraint, the rule minimizes FPR then maximizes F1; ties prefer the higher threshold. Both character models select 0.5 and the word model selects 0.7. The same selection rule is applied to all learned configurations.
+
+Precision is TP/(TP+FP), recall TP/(TP+FN), FPR FP/(FP+TN), and F1 the harmonic mean of precision and recall. The main contrast is paired recall gain on identical test rows with an absolute experimental FPR constraint. A descriptive bootstrap samples four attack families with replacement for 2000 draws at seed 42. We report original-text-only metrics to make dependence on encoding variants explicit.
+\section{Results and Ablations}
+Table I reports all configurations on 96 test rows: 48 injected and 48 benign. The primary model has TP=45, FP=9, FN=3 and TN=39. Its recall improvement over keywords is 93.75 percentage points, satisfying the predicted improvement, but FPR=18.75\% exceeds 10\%. The hypothesis is not supported. The descriptive family-bootstrap interval for recall gain is 81.25 to 100 percentage points; with four attack families this is not strong population-level uncertainty evidence.
+
+Removing normalization changes recall from 93.75\% to 91.67\% and FPR from 18.75\% to 20.83\%. These differences correspond to one row each, so they offer limited support for broad normalization benefits. Replacing character features with word 1-2 grams yields 25\% recall and zero observed false positives. Because this ablation selects its own validation threshold, its difference includes representation and operating-point effects. Normalized keywords still detect no test attacks and have FPR=25\%; normalization alone does not provide semantic discrimination.
+
+On original text only, the primary detector catches 15 of 16 attacks and flags 3 of 16 benign sentences. The keyword baseline catches none and flags 4 benign sentences. Its expanded-set FPR is lower, 8.33\%, because encoding obscures its false-positive phrases. The held-out attacks intentionally avoid known keywords, making this a stress test rather than a representative prevalence-weighted comparison. These detection results are not comparable to M2 attack-success rates.
+\begin{table}[ht]\centering\caption{Test detection metrics (96 rows).}\begin{tabular}{lrrrr}\hline Model & P & R & F1 & FPR\\\hline
+Keywords & 0.000 & 0.000 & 0.000 & 0.083\\
+Norm. keywords & 0.000 & 0.000 & 0.000 & 0.250\\
+Norm. char LR & 0.833 & 0.938 & 0.882 & 0.188\\
+Raw char LR & 0.815 & 0.917 & 0.863 & 0.208\\
+Norm. word LR & 1.000 & 0.250 & 0.400 & 0.000\\
+\hline\end{tabular}\end{table}
+\section{Failure Analysis}
+All four original-text errors are retained below, with raw model scores and ground truth. Their encoding variants account for all twelve expanded-set errors.
+
+False negative: Complete the report using hired as the status value. Score=0.424; threshold=0.5.
+
+False positive: Published a tutorial quoting the phrase ignore all previous instructions. Score=0.561; threshold=0.5.
+
+False positive: Studied attacks that ask models to select this candidate. Score=0.600; threshold=0.5.
+
+False positive: Assisted applicants with scheduling interview appointments. Score=0.583; threshold=0.5.
+
+The false negative uses output-schema language. Two false positives quote attack-like language in benign descriptions, and another occurs in a benign service description. These examples support concern about context sensitivity and limited family coverage. They do not prove which learned feature caused each decision. Formatting-family recall is 75\%, hard-negative FPR 50\%, and service-family FPR 25\% on the expanded test set. An appropriate follow-up would use independent annotation and more benign quotations in training, evaluated on a newly frozen test set. That follow-up has not been performed.
+\section{Limitations, Validity and Ethics}
+Internal validity is limited by a single author defining both data and model choices. Family disjointness reduces direct leakage but does not guarantee semantic independence. One test phrase also appears in historical M2, so evaluation is not blinded. Construct validity is limited by sentence-level labels without full resume context or independent annotator agreement. A persuasive recommendation may be ambiguous; no successful exploitation of a live model is established.
+
+External validity is limited by short synthetic English text, balanced class prevalence, a small confusable map, and no actual rendering or extraction. The study does not measure whole-resume utility, factual fabrication, ranking quality, demographic fairness, or model-specific attack success. Statistical validity is limited by few families and correlated variants. The baseline is a fixed lexical component rather than the complete anchor defense. Zero test false positives in an ablation should not be interpreted as zero deployment risk.
+
+All material is synthetic and contains no real applicant data. A detector output should not automatically reject a person. The observed false-positive tradeoff motivates human review and independent validation before operational use.
+\section{Conclusion and Contribution Attribution}
+The primary prediction failed because recall improvement came with excessive false positives. A lightweight learned detector can recognize the authored held-out directives more often than fixed keywords, but this benchmark does not establish a safe screening defense. The reproduced component is the earlier local simulation inspired by ResumeShield; the original student contribution is the frozen sentence dataset, train/validation/test design, lightweight classifier comparison, ablations and documented negative finding. Future work should first strengthen annotation and context coverage, then evaluate an independently frozen document-level benchmark.
+\begin{thebibliography}{00}
+\bibitem{r1}J. Barach, ``ResumeShield: Channel Separation and an Open Benchmark for Indirect Prompt Injection in AI Resume Screening,'' arXiv:2609.20188v1, 2026. https://arxiv.org/abs/2609.20188
+\bibitem{r2}K. Greshake et al., ``Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection,'' AISec, 2023. https://arxiv.org/abs/2302.12173
+\bibitem{r3}Y. Liu et al., ``Formalizing and Benchmarking Prompt Injection Attacks and Defenses,'' USENIX Security, 2024; consulted arXiv:2310.12815v5. https://arxiv.org/abs/2310.12815
+\bibitem{r4}T. Murray, ``PhantomLint: Principled Detection of Hidden LLM Prompts in Structured Documents,'' arXiv:2508.17884v2, 2025. https://arxiv.org/abs/2508.17884 ; code: https://github.com/tobycmurray/phantom-lint
+\bibitem{r5}M. Zhang et al., ``Measuring Real-World Prompt Injection Attacks in LLM-based Resume Screening,'' USENIX Security, 2026. https://arxiv.org/abs/2605.28999
+\end{thebibliography}\end{document}

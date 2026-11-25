@@ -1,0 +1,722 @@
+{
+  "started_utc": "2026-11-25T02:52:04.773189+00:00",
+  "input_sha256": {
+    "M3_Protocol.json": "89717ceedafe8fdbc39d637d2e2bb5c5bfda5840e3c738a9d214acb97f307fda",
+    "data/sentences.json": "dcd6b74ea28bb66fcaff15e109f4d8107acb03f9c2ec2639d2bef802650062c4",
+    "experiment.py": "052d015d0c72ece67f130c68d14cb2224123f4d572504b0ad8cfebea93a73c0d"
+  },
+  "environment": {
+    "python": "3.14.0",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.5"
+  },
+  "split_rows": {
+    "train": 96,
+    "validation": 48,
+    "test": 96
+  },
+  "split_sources": {
+    "train": 32,
+    "validation": 16,
+    "test": 32
+  },
+  "thresholds": {
+    "normalized_char_lr": 0.5,
+    "raw_char_lr": 0.5,
+    "normalized_word_lr": 0.7
+  },
+  "validation": {
+    "normalized_char_lr": [
+      {
+        "threshold": 0.3,
+        "n": 48,
+        "tp": 24,
+        "fp": 18,
+        "fn": 0,
+        "tn": 6,
+        "precision": 0.5714285714285714,
+        "recall": 1.0,
+        "f1": 0.7272727272727273,
+        "fpr": 0.75
+      },
+      {
+        "threshold": 0.5,
+        "n": 48,
+        "tp": 24,
+        "fp": 0,
+        "fn": 0,
+        "tn": 24,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0
+      },
+      {
+        "threshold": 0.7,
+        "n": 48,
+        "tp": 12,
+        "fp": 0,
+        "fn": 12,
+        "tn": 24,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "fpr": 0.0
+      }
+    ],
+    "raw_char_lr": [
+      {
+        "threshold": 0.3,
+        "n": 48,
+        "tp": 24,
+        "fp": 24,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "fpr": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "n": 48,
+        "tp": 24,
+        "fp": 0,
+        "fn": 0,
+        "tn": 24,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0
+      },
+      {
+        "threshold": 0.7,
+        "n": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 24,
+        "tn": 24,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      }
+    ],
+    "normalized_word_lr": [
+      {
+        "threshold": 0.3,
+        "n": 48,
+        "tp": 24,
+        "fp": 24,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "fpr": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "n": 48,
+        "tp": 24,
+        "fp": 3,
+        "fn": 0,
+        "tn": 21,
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "f1": 0.9411764705882353,
+        "fpr": 0.125
+      },
+      {
+        "threshold": 0.7,
+        "n": 48,
+        "tp": 15,
+        "fp": 0,
+        "fn": 9,
+        "tn": 24,
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.7692307692307693,
+        "fpr": 0.0
+      }
+    ]
+  },
+  "metrics": {
+    "keywords": {
+      "n": 96,
+      "tp": 0,
+      "fp": 4,
+      "fn": 48,
+      "tn": 44,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.08333333333333333
+    },
+    "normalized_keywords": {
+      "n": 96,
+      "tp": 0,
+      "fp": 12,
+      "fn": 48,
+      "tn": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.25
+    },
+    "normalized_char_lr": {
+      "n": 96,
+      "tp": 45,
+      "fp": 9,
+      "fn": 3,
+      "tn": 39,
+      "precision": 0.8333333333333334,
+      "recall": 0.9375,
+      "f1": 0.8823529411764706,
+      "fpr": 0.1875
+    },
+    "raw_char_lr": {
+      "n": 96,
+      "tp": 44,
+      "fp": 10,
+      "fn": 4,
+      "tn": 38,
+      "precision": 0.8148148148148148,
+      "recall": 0.9166666666666666,
+      "f1": 0.8627450980392156,
+      "fpr": 0.20833333333333334
+    },
+    "normalized_word_lr": {
+      "n": 96,
+      "tp": 12,
+      "fp": 0,
+      "fn": 36,
+      "tn": 48,
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "fpr": 0.0
+    }
+  },
+  "original_only": {
+    "keywords": {
+      "n": 32,
+      "tp": 0,
+      "fp": 4,
+      "fn": 16,
+      "tn": 12,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.25
+    },
+    "normalized_keywords": {
+      "n": 32,
+      "tp": 0,
+      "fp": 4,
+      "fn": 16,
+      "tn": 12,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.25
+    },
+    "normalized_char_lr": {
+      "n": 32,
+      "tp": 15,
+      "fp": 3,
+      "fn": 1,
+      "tn": 13,
+      "precision": 0.8333333333333334,
+      "recall": 0.9375,
+      "f1": 0.8823529411764706,
+      "fpr": 0.1875
+    },
+    "raw_char_lr": {
+      "n": 32,
+      "tp": 15,
+      "fp": 3,
+      "fn": 1,
+      "tn": 13,
+      "precision": 0.8333333333333334,
+      "recall": 0.9375,
+      "f1": 0.8823529411764706,
+      "fpr": 0.1875
+    },
+    "normalized_word_lr": {
+      "n": 32,
+      "tp": 4,
+      "fp": 0,
+      "fn": 12,
+      "tn": 16,
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "fpr": 0.0
+    }
+  },
+  "per_family": {
+    "attack_authority": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 11,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "f1": 0.9565217391304348,
+        "fpr": 0.0
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 3,
+        "fp": 0,
+        "fn": 9,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "fpr": 0.0
+      }
+    },
+    "attack_format": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 9,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "fpr": 0.0
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 9,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "fpr": 0.0
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      }
+    },
+    "attack_paraphrase": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 6,
+        "fp": 0,
+        "fn": 6,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "fpr": 0.0
+      }
+    },
+    "attack_pressure": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 3,
+        "fp": 0,
+        "fn": 9,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "fpr": 0.0
+      }
+    },
+    "clean_hard_negative": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 4,
+        "fn": 0,
+        "tn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.3333333333333333
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 12,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 1.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 6,
+        "fn": 0,
+        "tn": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 7,
+        "fn": 0,
+        "tn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5833333333333334
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      }
+    },
+    "clean_project": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      }
+    },
+    "clean_recommendation": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      }
+    },
+    "clean_service": {
+      "keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_keywords": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      },
+      "normalized_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "tn": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.25
+      },
+      "raw_char_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "tn": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.25
+      },
+      "normalized_word_lr": {
+        "n": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0
+      }
+    }
+  },
+  "recall_gain": 0.9375,
+  "family_bootstrap_95_interval": [
+    0.8125,
+    1.0
+  ],
+  "hypothesis_supported": false
+}
