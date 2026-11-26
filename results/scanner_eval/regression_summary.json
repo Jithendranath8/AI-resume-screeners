@@ -1,0 +1,10 @@
+{
+  "documents": 42,
+  "blocks_compared": 652,
+  "mismatches": 0,
+  "verdicts": {
+    "clean -> clean": 6,
+    "attacked -> attack": 36
+  },
+  "examples": []
+}
