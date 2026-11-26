@@ -1,4 +1,4 @@
-"""Local presentation demo. Run: .venv/bin/python demo.py"""
+"""Local presentation demo. Run: .venv/bin/python pilot/demo.py"""
 import argparse
 import hashlib
 import json
