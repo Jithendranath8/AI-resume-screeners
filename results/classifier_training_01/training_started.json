@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-11-25T18:31:22.852586+00:00",
+  "seed": 42,
+  "base_model": "distilbert/distilbert-base-uncased",
+  "base_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "sources": {
+    "deepset/prompt-injections": "4f61ecb038e9c3fb77e21034b22511b523772cdd",
+    "classifier_resume_domain.csv": "bc87f39307fbeee1496b3eaf5e6d2a0263e449f1de2e9de69da84ba118b78a07"
+  },
+  "data_sha256": "425251fa5f6f5c823df1c2a7ba58fda24487af2f40b4a3dcebd928449b76a3dd",
+  "epochs": 3,
+  "learning_rate": 2e-05,
+  "max_length": 256,
+  "train_batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "device": "mps",
+  "threshold_rule": "Choose highest validation F1 with FPR<=0.10 among 0.1,...,0.9; else lowest FPR then highest F1. Tie: higher threshold.",
+  "caveat": "Exploratory fine-tuning: the authored injection families were written after observing the pretrained detector miss paraphrased payloads in run pdf_llama32_3b_01. Not a pre-registered classifier; a confirmatory PDF evaluation needs a new run ID and new payload families."
+}
