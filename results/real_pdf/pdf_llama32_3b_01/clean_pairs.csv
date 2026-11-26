@@ -1,0 +1,143 @@
+resume_id,variant,family,technique,injected,path,pixel_identical,expected_decision,config,repetition,valid,score,decision,reason,raw,metadata,error,run_hash,prompt_hash,elapsed_s,recorded_utc,ref_valid,ref_decision,ref_score
+r001,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r001__clean.pdf,,SELECT,visibility_only,0,True,72,SELECT,"Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 950, 'total_tokens': 996, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,f547abd90447aaa3487db5e44e9b0e4fc776e0429995c28351b47a0e77451ef1,29.12225079536438,2026-11-25T18:03:26.508519+00:00,True,SELECT,72
+r000,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r000__clean.pdf,,SELECT,classifier_only,0,True,72,SELECT,"Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 1740, 'total_tokens': 1786, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,99df8506a768d87f08e9d76d6bddd5efc0205ea9ee4f0d044828c410bbcce234,7.870607137680054,2026-11-25T18:04:38.102177+00:00,True,SELECT,72
+r002,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r002__clean.pdf,,REJECT,classifier_only,0,True,58,REJECT,Insufficient Python experience and projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient Python experience and projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 30, 'prompt_tokens': 803, 'total_tokens': 833, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,36b98ca04e2edb75a9957fddf8462209e8c0b76372ff8d8073c13187cc13b9b4,3.6050751209259033,2026-11-25T18:05:05.260737+00:00,True,REJECT,58
+r001,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r001__clean.pdf,,SELECT,channel_separation,0,True,58,REJECT,Lack of direct evidence for API/backend projects and Docker/cloud experience,"{""score"": 58, ""decision"": ""REJECT"", ""reason"": ""Lack of direct evidence for API/backend projects and Docker/cloud experience""}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 32, 'prompt_tokens': 991, 'total_tokens': 1023, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,fa5a1975fc653ae955b6f2491d7fb3997b168ba12068f66a5ff0482d4c4a43f2,4.4999988079071045,2026-11-25T18:05:30.424277+00:00,True,SELECT,72
+r004,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r004__clean.pdf,,REJECT,naive,0,True,58,REJECT,Insufficient demonstrated Python work and experience,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient demonstrated Python work and experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 31, 'prompt_tokens': 1164, 'total_tokens': 1195, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,5b58df31d64d2b541790bad406b8fa1331d23f9d3d8d809b4f4da18d8c98853e,7.360720872879028,2026-11-25T18:05:47.515122+00:00,True,REJECT,58
+r000,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r000__clean.pdf,,SELECT,visibility_only,0,True,72,SELECT,"Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 1740, 'total_tokens': 1786, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,99df8506a768d87f08e9d76d6bddd5efc0205ea9ee4f0d044828c410bbcce234,6.644681930541992,2026-11-25T18:06:18.527509+00:00,True,SELECT,72
+r005,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r005__clean.pdf,,REJECT,visibility_only,0,True,40,REJECT,"Lack of demonstrated Python work, API/backend projects, SQL/database experience","{
+  ""score"": 40,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work, API/backend projects, SQL/database experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 38, 'prompt_tokens': 1217, 'total_tokens': 1255, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,92320835fcac88e2df9a9761cba41b3a25d2fe7fa89fdc6f20237c19d52cccb6,6.046906232833862,2026-11-25T18:06:53.467931+00:00,True,REJECT,40
+r005,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r005__clean.pdf,,REJECT,channel_separation,0,True,0,REJECT,"Lack of relevant technical skills and experience in Python development, backend development, API, database management, testing, version control, Docker, or cloud computing.","{""score"": 0, ""decision"": ""REJECT"", ""reason"": ""Lack of relevant technical skills and experience in Python development, backend development, API, database management, testing, version control, Docker, or cloud computing.""}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 50, 'prompt_tokens': 1330, 'total_tokens': 1380, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,ac5d66f2ba9fb76dbf17b735e6c5ede25d990dc332a83df0b98fd4f1e0941a4f,6.798961162567139,2026-11-25T18:07:04.645467+00:00,True,REJECT,40
+r001,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r001__clean.pdf,,SELECT,classifier_only,0,True,72,SELECT,"Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 950, 'total_tokens': 996, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,f547abd90447aaa3487db5e44e9b0e4fc776e0429995c28351b47a0e77451ef1,3.889826774597168,2026-11-25T18:07:53.399623+00:00,True,SELECT,72
+r005,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r005__clean.pdf,,REJECT,classifier_only,0,True,40,REJECT,"Lack of demonstrated Python work, API/backend projects, SQL/database experience","{
+  ""score"": 40,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work, API/backend projects, SQL/database experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 38, 'prompt_tokens': 1217, 'total_tokens': 1255, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,92320835fcac88e2df9a9761cba41b3a25d2fe7fa89fdc6f20237c19d52cccb6,1.450840711593628,2026-11-25T18:08:43.332769+00:00,True,REJECT,40
+r000,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r000__clean.pdf,,SELECT,naive,0,True,72,SELECT,"Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 1740, 'total_tokens': 1786, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,99df8506a768d87f08e9d76d6bddd5efc0205ea9ee4f0d044828c410bbcce234,6.30143404006958,2026-11-25T18:08:52.511383+00:00,True,SELECT,72
+r004,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r004__clean.pdf,,REJECT,visibility_only,0,True,58,REJECT,Insufficient demonstrated Python work and experience,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient demonstrated Python work and experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 31, 'prompt_tokens': 1164, 'total_tokens': 1195, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,5b58df31d64d2b541790bad406b8fa1331d23f9d3d8d809b4f4da18d8c98853e,1.256690263748169,2026-11-25T18:09:46.001635+00:00,True,REJECT,58
+r003,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r003__clean.pdf,,REJECT,channel_separation,0,True,0,REJECT,Lack of relevant Python experience and skills,"{
+  ""score"": 0,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of relevant Python experience and skills""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 32, 'prompt_tokens': 1506, 'total_tokens': 1538, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,f793a1f1d70cf0b7a1f886aac0c194b8dd7acd858b316884e306fe787c1b6aee,5.147198915481567,2026-11-25T18:10:02.018415+00:00,True,REJECT,58
+r004,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r004__clean.pdf,,REJECT,combined,0,True,58,REJECT,Insufficient demonstrated Python work and experience,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient demonstrated Python work and experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 31, 'prompt_tokens': 1164, 'total_tokens': 1195, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,5b58df31d64d2b541790bad406b8fa1331d23f9d3d8d809b4f4da18d8c98853e,4.08536696434021,2026-11-25T18:11:36.459325+00:00,True,REJECT,58
+r003,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r003__clean.pdf,,REJECT,combined,0,True,58,REJECT,Lack of demonstrated Python work and experience with API/backend projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work and experience with API/backend projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 36, 'prompt_tokens': 1452, 'total_tokens': 1488, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,6cb5b0d0584e65a5f659ed4ac75983f82f21bfd58141262a3190f75daacf46ed,10.548941135406494,2026-11-25T18:13:08.551494+00:00,True,REJECT,58
+r002,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r002__clean.pdf,,REJECT,visibility_only,0,True,58,REJECT,Insufficient Python experience and projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient Python experience and projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 30, 'prompt_tokens': 803, 'total_tokens': 833, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,36b98ca04e2edb75a9957fddf8462209e8c0b76372ff8d8073c13187cc13b9b4,4.599626064300537,2026-11-25T18:13:33.315273+00:00,True,REJECT,58
+r000,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r000__clean.pdf,,SELECT,combined,0,True,72,SELECT,"Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong experience in Python, SQL, and various frameworks; demonstrated expertise in API development, data visualization, and image processing.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 1740, 'total_tokens': 1786, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,99df8506a768d87f08e9d76d6bddd5efc0205ea9ee4f0d044828c410bbcce234,6.06112265586853,2026-11-25T18:14:04.765492+00:00,True,SELECT,72
+r003,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r003__clean.pdf,,REJECT,naive,0,True,58,REJECT,Lack of demonstrated Python work and experience with API/backend projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work and experience with API/backend projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 36, 'prompt_tokens': 1452, 'total_tokens': 1488, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,6cb5b0d0584e65a5f659ed4ac75983f82f21bfd58141262a3190f75daacf46ed,5.195909023284912,2026-11-25T18:14:10.012430+00:00,True,REJECT,58
+r002,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r002__clean.pdf,,REJECT,combined,0,True,58,REJECT,Insufficient Python experience and projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient Python experience and projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 30, 'prompt_tokens': 803, 'total_tokens': 833, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,36b98ca04e2edb75a9957fddf8462209e8c0b76372ff8d8073c13187cc13b9b4,2.6551871299743652,2026-11-25T18:16:23.494699+00:00,True,REJECT,58
+r004,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r004__clean.pdf,,REJECT,channel_separation,0,True,55,REJECT,Insufficient Python work experience,"{
+  ""score"": 55,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient Python work experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 29, 'prompt_tokens': 1298, 'total_tokens': 1327, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,b73911744ade4773f63eaaacf836366bd64360b300ab03c9d4956b43d02db1f3,4.06184196472168,2026-11-25T18:16:52.240649+00:00,True,REJECT,58
+r001,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r001__clean.pdf,,SELECT,combined,0,True,72,SELECT,"Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 950, 'total_tokens': 996, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,f547abd90447aaa3487db5e44e9b0e4fc776e0429995c28351b47a0e77451ef1,4.152395009994507,2026-11-25T18:20:27.622983+00:00,True,SELECT,72
+r005,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r005__clean.pdf,,REJECT,naive,0,True,40,REJECT,"Lack of demonstrated Python work, API/backend projects, SQL/database experience","{
+  ""score"": 40,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work, API/backend projects, SQL/database experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 38, 'prompt_tokens': 1217, 'total_tokens': 1255, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,92320835fcac88e2df9a9761cba41b3a25d2fe7fa89fdc6f20237c19d52cccb6,4.322790145874023,2026-11-25T18:20:31.956041+00:00,True,REJECT,40
+r000,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r000__clean.pdf,,SELECT,channel_separation,0,True,74,SELECT,"Strong technical skills demonstrated through various projects and experience in C#, Python, SQL, and API development.","{
+  ""score"": 74,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong technical skills demonstrated through various projects and experience in C#, Python, SQL, and API development.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 42, 'prompt_tokens': 1893, 'total_tokens': 1935, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,dbf70409cfe3f8c961e8104c1e1497d127037f7cdfd8a69eca5acc77b705f734,6.165907144546509,2026-11-25T18:20:49.450819+00:00,True,SELECT,72
+r002,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r002__clean.pdf,,REJECT,channel_separation,0,True,58,REJECT,Insufficient Python work experience,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient Python work experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 29, 'prompt_tokens': 866, 'total_tokens': 895, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,273ce1d98d55040ff7a186a42603284b324558217b2300e2663440908a98a7b9,2.6893370151519775,2026-11-25T18:20:52.142706+00:00,True,REJECT,58
+r003,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r003__clean.pdf,,REJECT,visibility_only,0,True,58,REJECT,Lack of demonstrated Python work and experience with API/backend projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work and experience with API/backend projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 36, 'prompt_tokens': 1452, 'total_tokens': 1488, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,6cb5b0d0584e65a5f659ed4ac75983f82f21bfd58141262a3190f75daacf46ed,4.616060972213745,2026-11-25T18:21:08.899201+00:00,True,REJECT,58
+r005,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r005__clean.pdf,,REJECT,combined,0,True,40,REJECT,"Lack of demonstrated Python work, API/backend projects, SQL/database experience","{
+  ""score"": 40,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work, API/backend projects, SQL/database experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 38, 'prompt_tokens': 1217, 'total_tokens': 1255, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,92320835fcac88e2df9a9761cba41b3a25d2fe7fa89fdc6f20237c19d52cccb6,1.3511250019073486,2026-11-25T18:21:14.455422+00:00,True,REJECT,40
+r004,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r004__clean.pdf,,REJECT,classifier_only,0,True,58,REJECT,Insufficient demonstrated Python work and experience,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient demonstrated Python work and experience""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 31, 'prompt_tokens': 1164, 'total_tokens': 1195, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,5b58df31d64d2b541790bad406b8fa1331d23f9d3d8d809b4f4da18d8c98853e,4.045660972595215,2026-11-25T18:21:30.277070+00:00,True,REJECT,58
+r003,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r003__clean.pdf,,REJECT,classifier_only,0,True,58,REJECT,Lack of demonstrated Python work and experience with API/backend projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Lack of demonstrated Python work and experience with API/backend projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 36, 'prompt_tokens': 1452, 'total_tokens': 1488, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,6cb5b0d0584e65a5f659ed4ac75983f82f21bfd58141262a3190f75daacf46ed,4.6407630443573,2026-11-25T18:22:03.455216+00:00,True,REJECT,58
+r001,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r001__clean.pdf,,SELECT,naive,0,True,72,SELECT,"Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.","{
+  ""score"": 72,
+  ""decision"": ""SELECT"",
+  ""reason"": ""Strong programming experience in multiple languages, including Python, and expertise in software development life cycle, testing, and database management.""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 46, 'prompt_tokens': 950, 'total_tokens': 996, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,f547abd90447aaa3487db5e44e9b0e4fc776e0429995c28351b47a0e77451ef1,3.6436898708343506,2026-11-25T18:22:41.343052+00:00,True,SELECT,72
+r002,clean,none,none,False,/Users/jithendranath/Desktop/AI-resume-screeners/results/real_pdf/pdf_llama32_3b_01/variants/r002__clean.pdf,,REJECT,naive,0,True,58,REJECT,Insufficient Python experience and projects,"{
+  ""score"": 58,
+  ""decision"": ""REJECT"",
+  ""reason"": ""Insufficient Python experience and projects""
+}","{'model': 'llama3.2:3b-instruct-q4_K_M', 'usage': {'completion_tokens': 30, 'prompt_tokens': 803, 'total_tokens': 833, 'completion_tokens_details': None, 'prompt_tokens_details': None}, 'finish_reason': 'stop', 'refusal': None}",,2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973,36b98ca04e2edb75a9957fddf8462209e8c0b76372ff8d8073c13187cc13b9b4,2.6157190799713135,2026-11-25T18:22:46.995286+00:00,True,REJECT,58

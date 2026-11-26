@@ -1,0 +1,178 @@
+{
+  "run_hash": "2bcafda4a27bc88c507c36bb3655286e0ed06113dd22cb020e71f286f33dc973",
+  "pdf_hash": "370ac38390435eb56e230fc001f334cb781219818861a7794073698dd4d1f169",
+  "spans": [
+    {
+      "page": 1,
+      "bbox": [
+        33.30133819580078,
+        28.805973052978516,
+        195.5823974609375,
+        52.212501525878906
+      ],
+      "text": "SOFTWARE ENGINEERING ANALYST\nSkills",
+      "ocr": "SOFTWARE ENGINEERING ANALYST\nSkills",
+      "visibility_agreement": 100.0,
+      "visibility_flag": false,
+      "classifier_score": 1.2072965773768374e-06,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        33.30133819580078,
+        54.6131706237793,
+        521.6762084960938,
+        91.82354736328125
+      ],
+      "text": "Programming Languages: C, SQL, Python, R, Tableau developer Tools: HP ALM Quality center, HP QTP, MS office, Trello- Project\nmanagement tool, Streak CRM.\nAccomplishments",
+      "ocr": "Programming Languages: C, SQL, Python, R, Tableau developer Tools: HP ALM Quality center, HP QTP, MS office, Trello- Project\nmanagement tool, Streak CRM.\nAccomplishments",
+      "visibility_agreement": 100.0,
+      "visibility_flag": false,
+      "classifier_score": 0.00020501355174928904,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        57.30803680419922,
+        102.02639770507812,
+        477.578857421875,
+        113.42957305908203
+      ],
+      "text": "Certifications: Coursera Introduction to interactive programming using Python,Rice University; Udemy certified SQL.",
+      "ocr": "Certifications: Coursera Introduction to interactive programming using Python,Rice University, Udemy certified SQL.",
+      "visibility_agreement": 99.1304347826087,
+      "visibility_flag": false,
+      "classifier_score": 6.442531594075263e-05,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        33.30133819580078,
+        123.63241577148438,
+        256.9009094238281,
+        159.0423126220703
+      ],
+      "text": "Experience\n02/2017 to 07/2017\nSoftware Engineering Analyst Company Name \u00ef\u00bc\u200b City , State",
+      "ocr": "Experience\n02/2017 to 07/2017\nSoftware Engineering Analyst Company Name i City , State",
+      "visibility_agreement": 98.26589595375722,
+      "visibility_flag": false,
+      "classifier_score": 6.037184448359767e-06,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        57.30803680419922,
+        169.24514770507812,
+        562.3561401367188,
+        252.6684112548828
+      ],
+      "text": "Enactus chapter of Thapar University Founded project Soul of the clay as the team lead of Enactus to aid the artisans by up skilling them\nwith modern day techniques, thereby increasing the income of these artisans by 150%.\nExecuted project Naritva, where I along with my team implemented a socio-economic business model in order to improve women sanitation\nin rural areas of India with motive to reduce diseases prevalent among rural women.\nExecuted project Jaivika to bolster farmers by setting up machinery to produce low cost manure from organic waste.\nStudent Alumni Interaction Cell - Administered alumni relations as a senior member in SAIC and held the responsibility of event\nmanagement in cultural events.",
+      "ocr": "Enactus chapter of Thapar University Founded project Soul of the clay as the team lead of Enactus to aid the artisans by up skilling them\nwith modem day techniques, thereby increasing the income of these artisans by 150%.\n\nExecuted project Naritva, where I along with my team implemented a socio-economic business model in order to improve women sanitation\nin rural areas of India with motive to reduce diseases prevalent among rural women.\n\nExecuted project Jaivika to bolster farmers by setting up machinery to produce low cost manure from organic waste.\n\nStudent Alumni Interaction Cell - Administered alunni relations as a senior member in SAIC and held the responsibility of event\nmanagerrent in cultural events.",
+      "visibility_agreement": 99.43977591036415,
+      "visibility_flag": false,
+      "classifier_score": 1.6621422673779307e-06,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        33.30133819580078,
+        262.87127685546875,
+        139.9696807861328,
+        286.27777099609375
+      ],
+      "text": "12/2016 to 02/2017\nSoftware Engineering Analyst",
+      "ocr": "12/2016 to 02/2017\nSoftware Engineering Analyst",
+      "visibility_agreement": 100.0,
+      "visibility_flag": false,
+      "classifier_score": 1.808831143534917e-06,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        57.30803680419922,
+        296.4806213378906,
+        548.0835571289062,
+        319.88714599609375
+      ],
+      "text": "Project- Global Site System Services Delivered automation tools using HP Quick Test Professional and VB script to achieve 95 percent\ntest coverage and increase the efficiency of process by 25 percent.",
+      "ocr": "Project- Global Site System Services Delivered automation tools using HP Quick Test Professional and VB script to achieve 95 percent\ntest coverage and increase the efficiency of process by 25 percent.",
+      "visibility_agreement": 100.0,
+      "visibility_flag": false,
+      "classifier_score": 1.1984966477029957e-06,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        33.30133819580078,
+        330.0899963378906,
+        138.12777709960938,
+        353.49652099609375
+      ],
+      "text": "12/2015 to 11/2016\nAssociate Software Engineer",
+      "ocr": "12/2015 to 11/2016\nAssociate Software Engineer",
+      "visibility_agreement": 100.0,
+      "visibility_flag": false,
+      "classifier_score": 1.579679747010232e-06,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        57.30803680419922,
+        363.6993713378906,
+        562.487548828125,
+        399.1092529296875
+      ],
+      "text": "Project- Global Site System Services Worked as a part of quality assurance team for one of the leading Oil and Gas Company by functional\ntesting in a simulation lab to assure the smooth functioning of 300 sites across the globe.\nCommunicated with a team of business analysts in order to understand the business scenarios and draft test scenarios for application testing.",
+      "ocr": "Project- Global Site System Services Worked as a part of quality assurance team for one of the leading Oil and Gas Company by functional\ntesting in a simulation lab to assure the smooth functioning of 300 sites across the globe.\nCommunicated with a team of business analysts in order to understand the business scenarios and draft test scenarios for application testing.",
+      "visibility_agreement": 100.0,
+      "visibility_flag": false,
+      "classifier_score": 8.2486508290458e-07,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        33.30133819580078,
+        409.3121032714844,
+        553.199951171875,
+        576.7588500976562
+      ],
+      "text": "Education and Training\nPresent\nSyracuse University \u00ef\u00bc\u200b City , State\nJune 2015\nB.E : Chemical Engineering MS IM Thapar University \u00ef\u00bc\u200b City India Chemical Engineering 6.7/10\nMay 2011\nDelhi Public School Secured 86.8 percent in Class XII: Mathematics: 96/100, Physics: 81/100, Chemistry: 89/100, English- 91/100\nInterests\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.\nSkills\nautomation tools, business processes, C, Chemistry, CRM, client, English, event management, functional, HP, image, team lead, machinery,\nMathematics, MS office, Oil, developer, Physics, Programming, progress, Project management, Python, QTP, Quick Test Professional, Quality,\nquality assurance, simulation, SQL, Tableau, VB script\nAdditional Information",
+      "ocr": "Education and Training\n\nPresent\n\nSyracuse University i'/s City , State\n\nJune 2015\n\nB.E : Chemical Engineering MS IM Thapar University i\u2019 City India Chemical Engineering 6.7/10\n\nMay 2011\n\nDelhi Public School Secured 86.8 percent in Class XII: Mathematics: 96/100, Physics: 81/100, Chemistry: 89/100, English- 91/100\nInterests\n\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.\n\nSkills\n\nautomation tools, business processes, C, Chemistry, CRM, client, English, event management, functional, HP, image, team lead, machinery,\nMathematics, MS office, Oil, developer, Physics, Programming, progress, Project management, Python, QTP, Quick Test Professional, Quality,\nquality assurance, simulation, SQL, Tableau, VB script\n\nAdditional Information",
+      "visibility_agreement": 99.37027707808565,
+      "visibility_flag": false,
+      "classifier_score": 0.00021719624055549502,
+      "classifier_flag": false
+    },
+    {
+      "page": 1,
+      "bbox": [
+        57.30803680419922,
+        586.961669921875,
+        558.8450927734375,
+        634.3748779296875
+      ],
+      "text": "AWARDS AND RECOGNITION Accenture Outstanding Performer Award. Awarded Certificate of appreciation by Enactus India to\nbring a change using entrepreneurial action. Awarded Certificate of appreciation by Thapar University to organize first economics festival of\nthe University.\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.",
+      "ocr": "AWARDS AND RECOGNITION Accenture Outstanding Performer Award. Awarded Certificate of appreciation by Enactus India to\nbring a change using entrepreneurial action. Awarded Certificate of appreciation by Thapar University to organize first economics festival of\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.",
+      "visibility_agreement": 97.911227154047,
+      "visibility_flag": false,
+      "classifier_score": 4.707693733507767e-05,
+      "classifier_flag": false
+    }
+  ],
+  "texts": {
+    "naive": "SOFTWARE ENGINEERING ANALYST\nSkills\nProgramming Languages: C, SQL, Python, R, Tableau developer Tools: HP ALM Quality center, HP QTP, MS office, Trello- Project\nmanagement tool, Streak CRM.\nAccomplishments\nCertifications: Coursera Introduction to interactive programming using Python,Rice University; Udemy certified SQL.\nExperience\n02/2017 to 07/2017\nSoftware Engineering Analyst Company Name \u00ef\u00bc\u200b City , State\nEnactus chapter of Thapar University Founded project Soul of the clay as the team lead of Enactus to aid the artisans by up skilling them\nwith modern day techniques, thereby increasing the income of these artisans by 150%.\nExecuted project Naritva, where I along with my team implemented a socio-economic business model in order to improve women sanitation\nin rural areas of India with motive to reduce diseases prevalent among rural women.\nExecuted project Jaivika to bolster farmers by setting up machinery to produce low cost manure from organic waste.\nStudent Alumni Interaction Cell - Administered alumni relations as a senior member in SAIC and held the responsibility of event\nmanagement in cultural events.\n12/2016 to 02/2017\nSoftware Engineering Analyst\nProject- Global Site System Services Delivered automation tools using HP Quick Test Professional and VB script to achieve 95 percent\ntest coverage and increase the efficiency of process by 25 percent.\n12/2015 to 11/2016\nAssociate Software Engineer\nProject- Global Site System Services Worked as a part of quality assurance team for one of the leading Oil and Gas Company by functional\ntesting in a simulation lab to assure the smooth functioning of 300 sites across the globe.\nCommunicated with a team of business analysts in order to understand the business scenarios and draft test scenarios for application testing.\nEducation and Training\nPresent\nSyracuse University \u00ef\u00bc\u200b City , State\nJune 2015\nB.E : Chemical Engineering MS IM Thapar University \u00ef\u00bc\u200b City India Chemical Engineering 6.7/10\nMay 2011\nDelhi Public School Secured 86.8 percent in Class XII: Mathematics: 96/100, Physics: 81/100, Chemistry: 89/100, English- 91/100\nInterests\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.\nSkills\nautomation tools, business processes, C, Chemistry, CRM, client, English, event management, functional, HP, image, team lead, machinery,\nMathematics, MS office, Oil, developer, Physics, Programming, progress, Project management, Python, QTP, Quick Test Professional, Quality,\nquality assurance, simulation, SQL, Tableau, VB script\nAdditional Information\nAWARDS AND RECOGNITION Accenture Outstanding Performer Award. Awarded Certificate of appreciation by Enactus India to\nbring a change using entrepreneurial action. Awarded Certificate of appreciation by Thapar University to organize first economics festival of\nthe University.\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.",
+    "channel_separation": "SOFTWARE ENGINEERING ANALYST\nSkills\nProgramming Languages: C, SQL, Python, R, Tableau developer Tools: HP ALM Quality center, HP QTP, MS office, Trello- Project\nmanagement tool, Streak CRM.\nAccomplishments\nCertifications: Coursera Introduction to interactive programming using Python,Rice University; Udemy certified SQL.\nExperience\n02/2017 to 07/2017\nSoftware Engineering Analyst Company Name \u00ef\u00bc\u200b City , State\nEnactus chapter of Thapar University Founded project Soul of the clay as the team lead of Enactus to aid the artisans by up skilling them\nwith modern day techniques, thereby increasing the income of these artisans by 150%.\nExecuted project Naritva, where I along with my team implemented a socio-economic business model in order to improve women sanitation\nin rural areas of India with motive to reduce diseases prevalent among rural women.\nExecuted project Jaivika to bolster farmers by setting up machinery to produce low cost manure from organic waste.\nStudent Alumni Interaction Cell - Administered alumni relations as a senior member in SAIC and held the responsibility of event\nmanagement in cultural events.\n12/2016 to 02/2017\nSoftware Engineering Analyst\nProject- Global Site System Services Delivered automation tools using HP Quick Test Professional and VB script to achieve 95 percent\ntest coverage and increase the efficiency of process by 25 percent.\n12/2015 to 11/2016\nAssociate Software Engineer\nProject- Global Site System Services Worked as a part of quality assurance team for one of the leading Oil and Gas Company by functional\ntesting in a simulation lab to assure the smooth functioning of 300 sites across the globe.\nCommunicated with a team of business analysts in order to understand the business scenarios and draft test scenarios for application testing.\nEducation and Training\nPresent\nSyracuse University \u00ef\u00bc\u200b City , State\nJune 2015\nB.E : Chemical Engineering MS IM Thapar University \u00ef\u00bc\u200b City India Chemical Engineering 6.7/10\nMay 2011\nDelhi Public School Secured 86.8 percent in Class XII: Mathematics: 96/100, Physics: 81/100, Chemistry: 89/100, English- 91/100\nInterests\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.\nSkills\nautomation tools, business processes, C, Chemistry, CRM, client, English, event management, functional, HP, image, team lead, machinery,\nMathematics, MS office, Oil, developer, Physics, Programming, progress, Project management, Python, QTP, Quick Test Professional, Quality,\nquality assurance, simulation, SQL, Tableau, VB script\nAdditional Information\nAWARDS AND RECOGNITION Accenture Outstanding Performer Award. Awarded Certificate of appreciation by Enactus India to\nbring a change using entrepreneurial action. Awarded Certificate of appreciation by Thapar University to organize first economics festival of\nthe University.\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.",
+    "visibility_only": "SOFTWARE ENGINEERING ANALYST\nSkills\nProgramming Languages: C, SQL, Python, R, Tableau developer Tools: HP ALM Quality center, HP QTP, MS office, Trello- Project\nmanagement tool, Streak CRM.\nAccomplishments\nCertifications: Coursera Introduction to interactive programming using Python,Rice University; Udemy certified SQL.\nExperience\n02/2017 to 07/2017\nSoftware Engineering Analyst Company Name \u00ef\u00bc\u200b City , State\nEnactus chapter of Thapar University Founded project Soul of the clay as the team lead of Enactus to aid the artisans by up skilling them\nwith modern day techniques, thereby increasing the income of these artisans by 150%.\nExecuted project Naritva, where I along with my team implemented a socio-economic business model in order to improve women sanitation\nin rural areas of India with motive to reduce diseases prevalent among rural women.\nExecuted project Jaivika to bolster farmers by setting up machinery to produce low cost manure from organic waste.\nStudent Alumni Interaction Cell - Administered alumni relations as a senior member in SAIC and held the responsibility of event\nmanagement in cultural events.\n12/2016 to 02/2017\nSoftware Engineering Analyst\nProject- Global Site System Services Delivered automation tools using HP Quick Test Professional and VB script to achieve 95 percent\ntest coverage and increase the efficiency of process by 25 percent.\n12/2015 to 11/2016\nAssociate Software Engineer\nProject- Global Site System Services Worked as a part of quality assurance team for one of the leading Oil and Gas Company by functional\ntesting in a simulation lab to assure the smooth functioning of 300 sites across the globe.\nCommunicated with a team of business analysts in order to understand the business scenarios and draft test scenarios for application testing.\nEducation and Training\nPresent\nSyracuse University \u00ef\u00bc\u200b City , State\nJune 2015\nB.E : Chemical Engineering MS IM Thapar University \u00ef\u00bc\u200b City India Chemical Engineering 6.7/10\nMay 2011\nDelhi Public School Secured 86.8 percent in Class XII: Mathematics: 96/100, Physics: 81/100, Chemistry: 89/100, English- 91/100\nInterests\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.\nSkills\nautomation tools, business processes, C, Chemistry, CRM, client, English, event management, functional, HP, image, team lead, machinery,\nMathematics, MS office, Oil, developer, Physics, Programming, progress, Project management, Python, QTP, Quick Test Professional, Quality,\nquality assurance, simulation, SQL, Tableau, VB script\nAdditional Information\nAWARDS AND RECOGNITION Accenture Outstanding Performer Award. Awarded Certificate of appreciation by Enactus India to\nbring a change using entrepreneurial action. Awarded Certificate of appreciation by Thapar University to organize first economics festival of\nthe University.\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.",
+    "classifier_only": "SOFTWARE ENGINEERING ANALYST\nSkills\nProgramming Languages: C, SQL, Python, R, Tableau developer Tools: HP ALM Quality center, HP QTP, MS office, Trello- Project\nmanagement tool, Streak CRM.\nAccomplishments\nCertifications: Coursera Introduction to interactive programming using Python,Rice University; Udemy certified SQL.\nExperience\n02/2017 to 07/2017\nSoftware Engineering Analyst Company Name \u00ef\u00bc\u200b City , State\nEnactus chapter of Thapar University Founded project Soul of the clay as the team lead of Enactus to aid the artisans by up skilling them\nwith modern day techniques, thereby increasing the income of these artisans by 150%.\nExecuted project Naritva, where I along with my team implemented a socio-economic business model in order to improve women sanitation\nin rural areas of India with motive to reduce diseases prevalent among rural women.\nExecuted project Jaivika to bolster farmers by setting up machinery to produce low cost manure from organic waste.\nStudent Alumni Interaction Cell - Administered alumni relations as a senior member in SAIC and held the responsibility of event\nmanagement in cultural events.\n12/2016 to 02/2017\nSoftware Engineering Analyst\nProject- Global Site System Services Delivered automation tools using HP Quick Test Professional and VB script to achieve 95 percent\ntest coverage and increase the efficiency of process by 25 percent.\n12/2015 to 11/2016\nAssociate Software Engineer\nProject- Global Site System Services Worked as a part of quality assurance team for one of the leading Oil and Gas Company by functional\ntesting in a simulation lab to assure the smooth functioning of 300 sites across the globe.\nCommunicated with a team of business analysts in order to understand the business scenarios and draft test scenarios for application testing.\nEducation and Training\nPresent\nSyracuse University \u00ef\u00bc\u200b City , State\nJune 2015\nB.E : Chemical Engineering MS IM Thapar University \u00ef\u00bc\u200b City India Chemical Engineering 6.7/10\nMay 2011\nDelhi Public School Secured 86.8 percent in Class XII: Mathematics: 96/100, Physics: 81/100, Chemistry: 89/100, English- 91/100\nInterests\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.\nSkills\nautomation tools, business processes, C, Chemistry, CRM, client, English, event management, functional, HP, image, team lead, machinery,\nMathematics, MS office, Oil, developer, Physics, Programming, progress, Project management, Python, QTP, Quick Test Professional, Quality,\nquality assurance, simulation, SQL, Tableau, VB script\nAdditional Information\nAWARDS AND RECOGNITION Accenture Outstanding Performer Award. Awarded Certificate of appreciation by Enactus India to\nbring a change using entrepreneurial action. Awarded Certificate of appreciation by Thapar University to organize first economics festival of\nthe University.\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.",
+    "combined": "SOFTWARE ENGINEERING ANALYST\nSkills\nProgramming Languages: C, SQL, Python, R, Tableau developer Tools: HP ALM Quality center, HP QTP, MS office, Trello- Project\nmanagement tool, Streak CRM.\nAccomplishments\nCertifications: Coursera Introduction to interactive programming using Python,Rice University; Udemy certified SQL.\nExperience\n02/2017 to 07/2017\nSoftware Engineering Analyst Company Name \u00ef\u00bc\u200b City , State\nEnactus chapter of Thapar University Founded project Soul of the clay as the team lead of Enactus to aid the artisans by up skilling them\nwith modern day techniques, thereby increasing the income of these artisans by 150%.\nExecuted project Naritva, where I along with my team implemented a socio-economic business model in order to improve women sanitation\nin rural areas of India with motive to reduce diseases prevalent among rural women.\nExecuted project Jaivika to bolster farmers by setting up machinery to produce low cost manure from organic waste.\nStudent Alumni Interaction Cell - Administered alumni relations as a senior member in SAIC and held the responsibility of event\nmanagement in cultural events.\n12/2016 to 02/2017\nSoftware Engineering Analyst\nProject- Global Site System Services Delivered automation tools using HP Quick Test Professional and VB script to achieve 95 percent\ntest coverage and increase the efficiency of process by 25 percent.\n12/2015 to 11/2016\nAssociate Software Engineer\nProject- Global Site System Services Worked as a part of quality assurance team for one of the leading Oil and Gas Company by functional\ntesting in a simulation lab to assure the smooth functioning of 300 sites across the globe.\nCommunicated with a team of business analysts in order to understand the business scenarios and draft test scenarios for application testing.\nEducation and Training\nPresent\nSyracuse University \u00ef\u00bc\u200b City , State\nJune 2015\nB.E : Chemical Engineering MS IM Thapar University \u00ef\u00bc\u200b City India Chemical Engineering 6.7/10\nMay 2011\nDelhi Public School Secured 86.8 percent in Class XII: Mathematics: 96/100, Physics: 81/100, Chemistry: 89/100, English- 91/100\nInterests\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival.\nSkills\nautomation tools, business processes, C, Chemistry, CRM, client, English, event management, functional, HP, image, team lead, machinery,\nMathematics, MS office, Oil, developer, Physics, Programming, progress, Project management, Python, QTP, Quick Test Professional, Quality,\nquality assurance, simulation, SQL, Tableau, VB script\nAdditional Information\nAWARDS AND RECOGNITION Accenture Outstanding Performer Award. Awarded Certificate of appreciation by Enactus India to\nbring a change using entrepreneurial action. Awarded Certificate of appreciation by Thapar University to organize first economics festival of\nthe University.\nEcon Club - Coordinated events like Economics quiz, Virtual Stock Market, Life size monopoly in economics festival."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "resume_count": 4,
+  "mean_paired_drop": 0.7500000000000001,
+  "descriptive_95_interval": [
+    0.5833333333333334,
+    0.8333333333333334
+  ],
+  "caveat": "Few convenience-sampled resumes; not a population-level security guarantee."
+}
