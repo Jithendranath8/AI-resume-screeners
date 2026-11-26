@@ -1,14 +1,36 @@
-# The reproduction's core logic (screener, detector, defenses, metrics) is pure
-# Python standard library. The only third-party packages are for the tables and
-# figures rendered inside M2_Reproduction.ipynb:
-pandas>=2.0
-matplotlib>=3.8
+# One environment for everything outside pilot/: the resume injection scanner (scanner/), the real-PDF
+# experiment (experiment/), the report build (report/) and the notebooks M1–M6.
+# Versions are the ones installed in .venv (Python 3.13.1), which the recorded scanner evaluation ran with.
+#   python3.13 -m venv .venv && .venv/bin/pip install -r requirements.txt
+# Also needs the Tesseract OCR program: brew install tesseract   (or: apt-get install tesseract-ocr)
+# The earlier TF-IDF pilot has its own recorded environment: pilot/requirements.txt.
 
-# M1_Literature_Survey.ipynb is prose only and needs nothing.
-#
-# To open and run the notebooks:
-#   pip install -r requirements.txt jupyter
-#   jupyter notebook M2_Reproduction.ipynb   # run top to bottom
-#
-# For the completed M3-M6 training/reporting pipeline, use instead:
-#   pip install -r requirements-experiments.txt
+# Scanner: scanner/resume_scanner.py, scanner/scanner_app.py, scanner/evaluate_scanner.py
+pymupdf==1.27.2
+pytesseract==0.3.13
+rapidfuzz==3.14.6
+torch==2.14.1
+transformers==4.57.1
+sentencepiece==0.2.3
+protobuf==6.33.1
+pillow==13.0.0
+numpy==2.3.4
+pandas==2.3.3
+
+# Only for the optional AI screener comparison in scanner/scanner_app.py:
+openai==2.54.0
+
+# Only to retrain the fine-tuned classifier with experiment/train_classifier_local.py:
+datasets==4.8.5
+accelerate==1.16.0
+scikit-learn==1.7.2
+
+# Report build and notebooks: report/build_deliverables.py, report/verify_notebooks.py, M1–M6
+# (M1 is prose only; M2 needs only pandas and matplotlib). The paper PDF is compiled with Tectonic
+# when it is installed (brew install tectonic); otherwise a ReportLab reading copy is written.
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==7.1.0
+matplotlib==3.10.7
+reportlab==5.1.2
+Jinja2==3.1.6

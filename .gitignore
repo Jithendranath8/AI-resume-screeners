@@ -14,3 +14,24 @@ env/
 .idea/
 .vscode/
 .cache/
+
+# local secrets
+.env
+
+# Fine-tuned classifier weights and archives (about 500 MB per training run)
+results/classifier_training_*/resume_classifier/
+results/classifier_training_*/resume_classifier.zip
+results/classifier_training_*/checkpoints/
+
+# Third-party datasets, downloaded on demand (see scanner/evaluate_scanner.py)
+data/external/
+
+# Scanner evaluation: per-file rows and logs quote text from other people's resumes; only the summaries are kept
+results/scanner_eval/*_rows.json
+results/scanner_eval/*.log
+
+# Web pages: dependencies are installed with npm; the built copy in web/dist is kept
+web/node_modules/
+
+# Local assistant tooling
+.claude/

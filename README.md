@@ -1,114 +1,178 @@
-# Attacking and defending real PDF résumé screeners
+# Attacking and defending AI resume screeners
 
-## Current direction: real PDFs + real LLM + combined defence
+An NLP course project (milestones M1 to M6) on indirect prompt injection in resume screening: text hidden in a PDF
+that a recruiter never sees but an AI screener reads and obeys.
 
-The main extension is restored to the original proposal: **a real LLM screening actual PDF résumés, protected by visibility-diff + a transformer injection classifier**. Gemini is now the default hosted option; GPT-4o-mini and local Llama-3 remain available. The earlier TF-IDF study below is a completed pilot, not completion of this extension.
+![The foot of a real resume page as a person sees it, and as a program reads it](figures/overview_two_readings.png)
 
-**Start with these self-contained Colab notebooks:**
+**What it shows, on a small sample.** A real LLM screener (Llama 3.2 3B Instruct) was steered by text placed in real
+resume PDFs in 21 of 24 attacks. Two inexpensive checks in front of the model, a visibility-diff and an injection
+classifier, cut that to 3 of 24 without changing any decision on a clean resume. The prediction was recorded before
+the first model call and was met. The three attacks that survive are all visible, politely worded instructions.
 
-| Notebook | Purpose |
+| Attack success by configuration | Which attacks got through |
 |---|---|
-| [Real PDF LLM Defence](colab/Real_PDF_LLM_Defence_Colab.ipynb) | Upload real PDFs; render/OCR; compare extracted text; score with a transformer detector; test five defence configurations on an actual LLM; export results and show a PDF demo. |
-| [Train Transformer Classifier — T4](colab/Train_Transformer_Classifier_T4.ipynb) | Optional DistilBERT fine-tuning on a public injection dataset or your labelled CSV; export weights and a validation-selected threshold for the main notebook. |
+| ![Attack success rate](figures/M4_attack_success.png) | ![Ablation](figures/M4_ablation.png) |
 
-### How to run in Colab
-
-1. Download the main notebook and upload it at [Google Colab](https://colab.research.google.com/) using **File → Upload notebook**.
-2. The default is `BACKEND='gemini'` with `GEMINI_MODEL='gemini-3.5-flash-lite'`. Add your key as **GEMINI_API_KEY** in Colab Secrets (key icon), then enable notebook access. Do not paste it in chat or notebook cells. Check your project's free-tier eligibility, quota and billing in [AI Studio](https://aistudio.google.com/rate-limit); free access is limited, and a paid project may incur charges. Google documents free-tier content use for product improvement, so use properly anonymized, permitted documents. No GPU is needed for the hosted screener.
-   For local Llama-3-8B, set `BACKEND='llama'`, select a **T4 GPU**, obtain Meta model access, and add `HF_TOKEN`. Alternatively set `BACKEND='openai'` and add `OPENAI_API_KEY` for GPT-4o-mini.
-3. Upload 4–8 anonymized, consented or licensed real PDF résumés for an initial run. The workflow supports text-extractable English PDFs, not scanned-only documents. Include both qualified and unqualified examples.
-4. Fill the downloaded label template against the job rubric, then upload it as `labels.csv`. Do this before looking at LLM responses.
-5. Run the protocol, PDF construction, OCR/classifier preparation, and call-count preflight cells; then run the actual experiment. Five configurations are evaluated: naive, channel separation, visibility-only, classifier-only, and combined.
-6. Gemini runs in batches of at most 20 new calls by default, with pacing. This is a notebook setting, not a guarantee of Google's daily allowance. A batch/quota pause downloads a checkpoint; rerun the same experiment cell when quota permits. Completed calls are reused. To resume in a fresh runtime, upload the checkpoint through the Files pane and set `RESTORE_ZIP` before setup. Do not switch models mid-experiment; use a new run ID. Finish every batch before computing metrics.
-7. Use the inline PDF demo and download the results ZIP before Colab disconnects. Save the executed notebook too. Report results under the actual Gemini model ID; they are not GPT/Llama results.
-
-**Training is optional.** The main notebook defaults to an existing DeBERTa injection detector. To train your own classifier, run the T4 notebook first, download `resume_classifier.zip`, upload it to the main notebook's runtime, and set `CLASSIFIER_ZIP`. The default public training dataset is generic injection text, not a résumé dataset; final PDF evaluation is still necessary.
-
-**Status:** notebook implementation and offline checks are provided. GPU training, Colab OCR integration and real-LLM evaluation have not been executed here. The M4–M6 paper/results for this restored extension remain pending your real run. The current paper and original M3–M6 notebooks document only the earlier pilot. Do not submit their numbers as real-PDF/LLM results.
-
-Controlled attacks are placed on an identical supplementary page added to each PDF, with white, invisible or visible text. Hidden copies must render identically to the clean control while retaining extractable payloads. This is a limited placement experiment—not naturally occurring attacks or a full implementation of every concealment technique. Human labels, model errors, clean utility, detector errors and correlated variants are explicitly accounted for.
-
-## Earlier pilot: lightweight text detection
-
-A small CPU-only NLP course project anchored in **Jay Barach, ResumeShield**, [arXiv:2609.20188v1](https://arxiv.org/html/2609.20188v1).
-
-**Current result:** a normalized character TF-IDF + logistic-regression detector achieved **93.75% recall**, **83.33% precision**, **88.24% F1**, and **18.75% false-positive rate** on the frozen synthetic test set. The prior hypothesis required FPR ≤10%, so it was **not supported**. This is an honest negative result, not an unfinished experiment.
+The method is also packaged as a working tool, the **resume injection scanner**: any PDF in; a verdict, the attack
+type and its place on the page out.
 
 ## Start here
 
-| Deliverable | File |
+| Deliverable | Where |
 |---|---|
-| M1 literature survey, with review corrections | [M1](M1_Literature_Survey.ipynb) |
-| M2 partial reconstruction, with interpretation corrections | [M2](M2_Reproduction.ipynb) |
-| Freshly executed M2 and asserted benchmark counts | [Verified M2](results/M2_verified.ipynb), [values](results/M2_validation.json) |
-| M3 gap, one hypothesis, prediction, plan | [M3 notebook](M3_Research_Gap.ipynb), [frozen protocol](M3_Protocol.json) |
-| M4 baseline, experiment, metrics, prediction comparison, ablations | [M4 notebook](M4_Controlled_Experiments.ipynb) |
-| M5 actual failures, explanations, limitations, validity threats | [M5 notebook](M5_Failure_Analysis.ipynb) |
-| M6 IEEE-style paper | [PDF](paper/M6_Final_Paper.pdf), [IEEEtran source](paper/M6_Final_Paper.tex) |
-| Oral defence outline, questions, contribution attribution | [M6 defence](M6_Defence.ipynb) |
+| M1 Literature survey: five papers, anchor choice | [M1_Literature_Survey.ipynb](M1_Literature_Survey.ipynb) |
+| M2 Reproduction of the anchor paper (partial reconstruction) | [M2_Reproduction.ipynb](M2_Reproduction.ipynb), [verified run](results/m2_reproduction/) |
+| M3 Research gap, hypothesis, prediction, plan | [M3_Research_Gap.ipynb](M3_Research_Gap.ipynb), [frozen protocol](results/real_pdf/pdf_llama32_3b_01/protocol.json) |
+| M4 Controlled experiments and ablations | [M4_Controlled_Experiments.ipynb](M4_Controlled_Experiments.ipynb) |
+| M5 Failure analysis, limitations, validity | [M5_Failure_Analysis.ipynb](M5_Failure_Analysis.ipynb) |
+| M6 Paper (IEEE conference format, five pages, seven result figures) | [paper/M6_Final_Paper.pdf](paper/M6_Final_Paper.pdf), [LaTeX](paper/M6_Final_Paper.tex) |
+| M6 Defence outline, questions, attribution | [M6_Defence.ipynb](M6_Defence.ipynb) |
+| Slides, 14 pages | [presentation/AI_Resume_Screeners_Slides.pdf](presentation/AI_Resume_Screeners_Slides.pdf) |
+| Result figures, one per notebook result, named by milestone | [figures/](figures/) |
+| Resume injection scanner | [scanner/](scanner/), web pages in [web/](web/) |
 
-## Review of M1 and M2
+The anchor paper is J. Barach, *ResumeShield*, [arXiv:2609.20188](https://arxiv.org/abs/2609.20188).
 
-M1 has the right survey structure and an identifiable anchor. Review notes correct the claim that PhantomLint has no public code, clarify citation/version details, and supersede the larger PDF/LLM proposal.
+## Repository layout
 
-M2 executes successfully, but is a **partial reconstruction**, not an execution of the original paper's artifact. Its documents, filters and narrower success definition differ. The fence disables instruction obedience by construction. Visibility comes from synthetic flags; the historical zero-width flag is explicitly identified as unrealistic. The simulation cannot establish real-LLM safety or qualified-candidate utility. Review notes are added near the top of both notebooks; older discussion is preserved as historical context.
-
-The attachments supplied in chat were a short opening-cell excerpt and an empty output array, rather than a full notebook execution. Review therefore used the complete workspace notebooks. The read-only attachments were not changed.
-
-## Simple extension
-
-The new contribution is **text detection**, using standard TF-IDF and logistic regression. It uses 80 authored sentences: 32 train, 16 validation, 32 test, with disjoint families. Original, zero-width and homoglyph variants expand these to 96/48/96 rows. Variants stay with their source, and are not independent examples. All text is synthetic.
-
-The primary comparison uses fixed keyword matching versus normalized character features. Ablations remove normalization, switch to word features, and apply normalization to keywords alone. Thresholds are selected on validation only. The test outcome was retained without tuning afterward.
-
-This does not implement PDF extraction, train an LLM, measure real hiring decisions, or demonstrate a reduction in live-model attack success. Those are future extensions. The new experiment's detection metrics must not be compared directly with M2's ASR.
-
-## Run
-
-### Live presentation demo
-
-After installing the dependencies below, run:
-
-```bash
-.venv/bin/python demo.py
+```
+M1 … M6 notebooks      the six milestone deliverables
+scanner/               the tool: command line, web server, held-out evaluation, tests
+web/                   the two web pages (React); the built copy in web/dist is served by the scanner
+experiment/            real-PDF experiment run locally, and classifier fine-tuning
+colab/                 the same experiment as Colab notebooks, with its workflow source
+report/                generators: notebooks M3 to M6, the paper, the figures
+figures/               result figures (PNG and PDF), drawn from the recorded results
+paper/                 M6 paper, compiled PDF and IEEEtran source
+presentation/          slide deck, PDF and HTML source
+pilot/                 the earlier sentence-level pilot, self-contained (code, data, results, demo)
+data/                  six real resume PDFs with labels and provenance; classifier training text
+results/               recorded outputs: M2 reproduction, real-PDF run, classifier training, scanner evaluation
 ```
 
-Open **http://127.0.0.1:8501**. The demo uses the existing trained-method configuration; it does not yet implement the proposed sentence-transformer alternative. It recreates the model from training data only and uses the recorded threshold without changing research results. No additional dependencies are needed.
-
-For a three-minute demonstration:
-
-1. Choose **Ordinary experience** and click **Analyze text** to explain the input/output flow.
-2. Choose **A directive without known keywords** and compare the keyword and model flags.
-3. Choose the **zero-width** example and expand its normalized text to show preprocessing.
-4. Show **Known false positive** and **Known miss** to explain actual limitations.
-5. Paste or edit a sentence, one sentence per line, and analyze again. These live inputs are demonstrations, not additional controlled-test evidence.
-
-The model score is not a calibrated risk probability. The demo does not rank candidates or process PDFs. Long documents and line-level aggregation are not validated by the small sentence benchmark. Stop the server with Ctrl+C.
-
-Implementation: [demo.py](demo.py), [interface](demo.html). Validate prediction fidelity with `python -m unittest test_demo -v`.
-
-### Research experiments
-
-Python 3.14.0 was used for the recorded run. Create a virtual environment, then:
+## Run the scanner
 
 ```bash
-python -m pip install -r requirements-experiments.txt
-python experiment.py
-python build_deliverables.py
-python verify_results.py
-python verify_notebooks.py M2_Reproduction.ipynb M3_Research_Gap.ipynb M4_Controlled_Experiments.ipynb M5_Failure_Analysis.ipynb
+python -m pip install -r requirements.txt        # and Tesseract OCR: brew install tesseract
+python scanner/resume_scanner.py resume.pdf                                   # one file
+python scanner/resume_scanner.py inbox/ --csv results.csv --json reports.json # a folder
+python scanner/scanner_app.py                                                 # web pages at http://127.0.0.1:8502
 ```
 
-In VS Code, select the local virtual environment to open/run the notebooks. Run from this repository's root. The experiment needs no credentials, GPU, API calls or dataset download. Installation requires internet access.
+Each file gets one of three verdicts: **attack found**, **needs review** or **no attack found**. The command exits
+with 2, 1 or 0 for those, and 3 if a file could not be read, so it can sit in front of a screening pipeline.
+Scanning is offline and takes a few seconds per file.
 
-[experiment.py](experiment.py) trains and exports results. [build_deliverables.py](build_deliverables.py) renders reports from saved results without retraining. Rebuilding notebooks clears their cell outputs; execute them afterward. Re-running the experiment overwrites the local result files; preserve them before modifying the protocol or data. The original prediction file is hashed in the run record. This is a local pre-experiment record, not independent preregistration.
+How it decides: every page is rendered at 200 dpi and read by OCR, and each extracted text block is compared with
+what OCR saw in the same place. That is the experiment's visibility rule, and `scanner/evaluate_scanner.py regression`
+confirms the scanner gives the same flag and score as the recorded run on all 652 text blocks of its 42 documents.
+Two classifiers then score every piece of text, including metadata, comments and text inside images: the pretrained
+`protectai/deberta-v3-base-prompt-injection-v2` and a DistilBERT fine-tuned in this project. For hidden text the
+scanner names the method: same colour as the background, invisible text mode, transparency, microscopic font,
+outside the page, covered by a shape, or a switched-off layer.
 
-## Evidence
+The fine-tuned weights are not stored in the repository. Create them once, in about 11 minutes on an M2 laptop:
+`python experiment/train_classifier_local.py --sources deepset,resume,blocks --out results/classifier_training_02`.
+Without them the scanner still runs, says so, and the measured results below do not apply.
 
-- [Authored sentences and fixed splits](data/sentences.json)
-- [Expanded dataset](results/dataset.csv)
-- [Every test prediction and model score](results/predictions.csv)
-- [Metrics, thresholds, validation scores, versions and input hashes](results/run.json)
-- [Exact installed environment](results/environment.txt)
+The web pages are a Home page that explains the attacks, the method, the results and the limits, and a Scan page
+that takes one file or a batch, shows each verdict, and marks the text on the rendered page. Two extras are off
+until chosen: a test attack added to a file before scanning, and an AI screener comparison that scores the resume
+with and without the flagged text (this one can send text to a model provider). A result can be opened by link,
+for example `/scan?sample=r03_software_engineering_analyst_32985311.pdf&attack=white_text`. Design notes are in
+[web/DESIGN.md](web/DESIGN.md).
 
-The PDF is a two-column IEEE-style reading copy. The official IEEEtran LaTeX source is also supplied, but no LaTeX compiler was available locally. Add your name, institution and course details before submission. Check any course-specific page limit and rehearse the oral defence yourself.
+## Results
+
+### Real PDFs and a real LLM (M3 to M5)
+
+Six real resume PDFs (Kaggle Resume Dataset, CC0), 42 controlled documents, five configurations, 210 valid responses
+from Llama 3.2 3B Instruct served locally by Ollama. Recorded outputs: `results/real_pdf/pdf_llama32_3b_01/`.
+
+| Configuration | Successful attacks | Attack success rate | Clean decisions kept |
+|---|---|---|---|
+| No added defence | 21/24 | 87.5% | 100% |
+| Channel separation | 9/24 | 37.5% | 83.3% |
+| Visibility-diff only | 7/24 | 29.2% | 100% |
+| Classifier only | 9/24 | 37.5% | 100% |
+| Both checks combined | 3/24 | 12.5% | 100% |
+
+Predicted before the run: a reduction of at least 20 points with at least 95% clean agreement. Actual: 75.0 points
+and 100%. An exploratory fine-tuned classifier catches the paraphrase the pretrained one misses; its effect on
+attack success has **not** been measured.
+
+### The scanner on resumes it had not seen
+
+![Scanner on held-out resumes](figures/scanner_heldout.png)
+
+| Held-out run | Rules | Clean files judged clean | Hidden text found | Instruction not hidden: called an attack | The same: attack or review |
+|---|---|---|---|---|---|
+| `test` | 1.0 | 123 of 136 | 300 of 300 | 150 of 150, wording used in development | 150 of 150 |
+| `final` | 1.1 | 148 of 160 | 210 of 210 | 57 of 90, new wording | 84 of 90 |
+| `confirm` | 1.2, current | 139 of 140 | 140 of 140 | 39 of 60, new wording | 55 of 60 |
+
+Hidden text is the reliable part: across the two runs with new wording, all 350 hidden passages were found, whatever
+they said. A plainly visible instruction in unusual wording is the weak part. The rules were changed after the first
+two runs, so each version was measured again on fresh files. Summaries are in `results/scanner_eval/`.
+
+### Anchor reproduction (M2) and the earlier pilot
+
+| M2: reproduced against the paper | Pilot: recall and false positives |
+|---|---|
+| ![M2 reproduction](figures/M2_attack_success.png) | ![Pilot](figures/pilot_detection.png) |
+
+M2 rebuilds the ResumeShield benchmark locally (104 documents). It is a partial reconstruction: two filter-only
+rows differ from the paper, and the zero for channel separation is a property of the simulator, not evidence about
+a real model. The pilot, a TF-IDF sentence detector, reached 93.75% recall but an 18.75% false-positive rate against
+a 10% limit, so its hypothesis was **not supported**. It is kept as a negative result in [pilot/](pilot/).
+
+## Reproduce
+
+```bash
+python report/make_figures.py                 # figures/ from the recorded results
+python report/build_deliverables.py           # M3 to M6 notebooks and the paper (compiles LaTeX with Tectonic)
+python report/verify_notebooks.py M3_Research_Gap.ipynb M4_Controlled_Experiments.ipynb M5_Failure_Analysis.ipynb
+python -m unittest discover -s scanner        # scanner tests
+python colab/test_workflow.py                 # experiment pipeline checks
+python scanner/evaluate_scanner.py regression # the scanner against the recorded experiment
+cd pilot && python verify_results.py          # the pilot's recorded hashes and metrics
+```
+
+None of these calls an LLM or trains anything. Rebuilding the notebooks clears their outputs, so run
+`verify_notebooks.py` afterwards. The paper needs [Tectonic](https://tectonic-typesetting.github.io)
+(`brew install tectonic`); without it a reading copy is written with ReportLab.
+
+To repeat the experiment itself, which makes 210 model calls and needs a new run ID:
+
+```bash
+ollama pull llama3.2:3b-instruct-q4_K_M && ollama serve
+COMPAT_API_KEY=ollama python experiment/run_real_pdf_local.py --set BACKEND=compatible --set RUN_ID=<new id> \
+  --set COMPAT_BASE_URL=http://127.0.0.1:11434/v1 --set COMPAT_MODEL=llama3.2:3b-instruct-q4_K_M \
+  --set API_MAX_OUTPUT_TOKENS=250 --set API_PAUSE_SECONDS=0
+```
+
+The same workflow runs on Google Colab with a hosted model: upload
+[colab/Real_PDF_LLM_Defence_Colab.ipynb](colab/Real_PDF_LLM_Defence_Colab.ipynb), add the model key as a Colab secret,
+upload four to eight permitted resume PDFs and their labels, and run the cells in order.
+[colab/Train_Transformer_Classifier_T4.ipynb](colab/Train_Transformer_Classifier_T4.ipynb) trains the classifier on a T4 GPU.
+
+After changing anything under `web/src`, or after `python scanner/build_home_specimens.py`, rebuild the pages with
+`cd web && npm install && npm run build`.
+
+## Limits
+
+- Six resumes from one dataset, four of them eligible; the variants of a resume are correlated. No significance claim.
+- A 3-billion-parameter, 4-bit model. Larger screeners may behave differently.
+- Two fixed payload wordings on an appended page. Not naturally occurring attacks, and not adaptive ones.
+- One annotator. Hosted models could not be used without payment; the two unused attempts are noted in
+  `results/real_pdf/unused_attempts/`.
+- Instructions are recognised in English only, although hidden text is found in any language.
+- A finding is a reason for a person to look at a file, not proof of intent. A flag should never reject a candidate automatically.
+
+## Authors
+
+Akula Jithendranath (230120), Kolli Charan Adithya (230075) and Kammati Adithya (230145).
+Department of Computer Science and Artificial Intelligence, Newton School of Technology, Rishihood University.
+
+The names are set once for the paper and the M6 notebook in [report/paper_sections.py](report/paper_sections.py).
