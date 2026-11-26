@@ -6,10 +6,10 @@
 # small encoder classifier, not the Llama screener. No API key is required.
 #
 # Default data: the public `deepset/prompt-injections` dataset. This is a generic
-# injection dataset, not real résumés, and its results do not establish résumé
+# injection dataset, not real resumes, and its results do not establish resume
 # screening performance. Alternatively upload your own independently reviewed
-# résumé-related sentence CSV with `text,label,split,group_id` (label 0/1;
-# split train/validation/test). Keep a source résumé and all payload paraphrases
+# resume-related sentence CSV with `text,label,split,group_id` (label 0/1;
+# split train/validation/test). Keep a source resume and all payload paraphrases
 # in one group, and keep this classifier data separate from the final PDF benchmark.
 # Model substitution requires a NEW real-PDF run ID and a new pre-run prediction;
 # do not replace the model after seeing held-out PDF results and call it confirmatory.
@@ -171,7 +171,7 @@ display(test_rows[test_rows.label != test_rows.prediction][['text','label','scor
 # The exported model uses normalized text and injection label index 1. Main-notebook
 # inference scores overlapping windows and takes their maximum; this can flag more
 # long blocks than this sentence-level test, so the PDF evaluation remains necessary.
-# The generic-data test result is not a résumé test result or an ASR measurement.
+# The generic-data test result is not a resume test result or an ASR measurement.
 
 # %%
 export = OUT / 'resume_classifier'
